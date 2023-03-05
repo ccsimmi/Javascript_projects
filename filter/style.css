@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+:root {
+    --text-color: rgb(35, 111, 211);
+    --grey: rgb(223, 227, 233);
+    --grey-text: rgb(174, 184, 194);
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Tilt Neon', cursive;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 24em;
+    padding: 1rem;
+    margin: auto;
+}
+
+.users-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--grey);
+    border-radius: 5px;
+    height: 32em;
+    overflow-y: scroll;
+}
+
+.search {
+    margin: 1em;
+    display: flex;
+}
+
+.search label {
+    padding: 0.4em;
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+.search input {
+    flex-grow: 1;
+    padding: 0.4em;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid var(--grey);
+}
+
+.search i {
+    background: white;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    padding: 0.4em;
+    border: 1px solid var(--grey);
+    border-left: none;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.search i:hover {
+    background-color: var(--text-color);
+    color: white;
+    border-color: var(--text-color);
+    border-left: none;
+}
+
+.card {
+    padding: 1em;
+    display: flex;
+    margin: 0.8em;
+    border-radius: 5px;
+    border: 1px solid var(--grey);
+    box-shadow: rgba(209, 215, 223, 0.05) 0px 1px 3px, rgba(209, 215, 223, 0.05) 0px 1px 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.025);
+    border-color: var(--text-color);
+}
+
+img {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.card__info {
+    margin-left: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card__username {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+}
+
+.card__department {
+    font-size: 1em;
+    text-transform: lowercase;
+    color: var(--grey-text)
+}
+
+#number-of-users-in-list {
+    margin-left: 1.4em;
+}
